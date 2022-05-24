@@ -30,33 +30,7 @@ const onChangePicture = e => {
 
 // fungsi menggiram gambar
 const postToApi =()=>{
-  const FileHandle = File
-  var FormData = require('form-data');
-  var data = new FormData();
-  data.append('name', 'inovarr');
-  data.append('category', 'small');
-  data.append('price', '100000');
-  data.append('status', 'true');
-  data.append('image', FileHandle);
-  
-  var config = {
-    method: 'post',
-    url: 'https://rent-cars-api.herokuapp.com/admin/car',
-    data : data
-  };
-  
-  axios(config)
-  .then(function (response) {
-    console.log(response.data);
-    console.log(response);
-   
-      alert(response.statusText)
-    
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
-  
+ 
 
 
 }
@@ -67,8 +41,8 @@ const postToApi =()=>{
     <div className="App">
       <h1>ini input file </h1>
       <img width={100} height={100} src={FilePrev}/>
-      <input onChange={(e)=>{onChangePicture(e)}} type="file"/>
-      <button onClick={()=>{postToApi()}}>Upload</button>
+      <input onChange={(e)=>{} type="file"/>
+      <button onClick={()=>{}}>Upload</button>
     </div>
   );
 }
